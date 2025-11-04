@@ -1,0 +1,12 @@
+phidgets_spatial:
+  ros__parameters:
+    hub_port: 0
+    serial: 373223
+    frame_id: "phidgets_imu_link"
+    # linear_acceleration_stdev: 0.002744
+    # angular_velocity_stdev: 0.087266463
+    # magnetic_field_stdev: 0.0000011
+    # time_resynchronization_interval_ms: 5000
+    # data_interval_ms: 8
+    # callback_delta_epsilon_ms: 1
+    # publish_rate: 100
