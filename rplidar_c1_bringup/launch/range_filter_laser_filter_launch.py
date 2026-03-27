@@ -9,6 +9,10 @@ def generate_launch_description():
         Node(
             package="laser_filters",
             executable="scan_to_scan_filter_chain",
+            remappings=[
+                ('/scan', '/scan_raw'),
+                ('/scan_filtered', '/scan')
+            ],
             parameters=[
                 PathJoinSubstitution([
                     get_package_share_directory("rplidar_c1_bringup"),

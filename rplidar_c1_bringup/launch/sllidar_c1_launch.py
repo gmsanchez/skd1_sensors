@@ -34,7 +34,7 @@ def generate_launch_description():
             'serial_baudrate',
             default_value=serial_baudrate,
             description='Specifying usb port baudrate to connected lidar'),
-        
+
         DeclareLaunchArgument(
             'frame_id',
             default_value=frame_id,
@@ -59,6 +59,7 @@ def generate_launch_description():
             package='sllidar_ros2',
             executable='sllidar_node',
             name='sllidar_node',
+            remappings=[('/scan', '/scan_raw')],
             parameters=[{'channel_type':channel_type,
                          'serial_port': serial_port, 
                          'serial_baudrate': serial_baudrate, 
