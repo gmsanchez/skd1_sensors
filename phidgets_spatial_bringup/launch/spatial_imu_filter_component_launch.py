@@ -13,13 +13,13 @@ from launch.actions import DeclareLaunchArgument
 def generate_launch_description():
 
     ARGUMENTS = [
-         DeclareLaunchArgument('use_mag', default_value='False',
+         DeclareLaunchArgument('use_mag', default_value='false',
             description='Do not use magnetometer for orientation estimation by default. Set to True for outdoor use'),
     ]
 
     spatial_param_config = os.path.join(get_package_share_directory('phidgets_spatial_bringup'), 'config', 'phidgets_spatial.yaml')
     imu_filter_param_config = os.path.join(get_package_share_directory('phidgets_spatial_bringup'), 'config', 'imu_filter.yaml')
-    use_mag = LaunchConfiguration('use_mag', default='True')
+    use_mag = LaunchConfiguration('use_mag')
 
     # https://roscon.ros.org/2019/talks/roscon2019_composablenodes.pdf
     # https://github.com/ros2/rclcpp/issues/715#issuecomment-490425249
